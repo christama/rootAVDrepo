@@ -1,0 +1,29 @@
+#!/data/data/com.termux/files/usr/bin/bash
+# -------------------------------
+# CONFIG AUTO RUN di Termux:Boot
+# -------------------------------
+
+# Tunggu beberapa detik biar sistem stabil
+sleep 10
+
+# Contoh 1: Jalankan script python
+python /sdcard/bot_telegram.py
+
+# Contoh 2: Jalankan file bash lain
+bash /sdcard/myscript.sh
+
+# Contoh 3: Jalankan aplikasi Android tertentu
+am start -n com.whatsapp/.MainActivity     # WhatsApp
+# am start -n com.termux/.HomeActivity      # Termux sendiri
+
+# Contoh 4: Jalankan SSH server (kalau pakai openssh)
+# pkg install openssh
+# sshd
+
+# Contoh 5: Loop forever (untuk bot/jalan terus)
+# while true; do
+#   python /sdcard/mybot.py
+#   sleep 30
+# done
+
+echo "Auto-run selesai dijalankan" >> ~/auto-run.log
